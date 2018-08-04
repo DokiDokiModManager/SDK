@@ -32,15 +32,15 @@ call ddmm_earn_achievement("ACHIEVEMENT_1")
 
 Label - registers an achievement.
 
-id (string) = the unique identifier for your achievement, used in code (e.g. `MY_ACHIEVEMENT_1`)
-name (string) = the user-facing name of the achievement (e.g. `My Achievement`)
-description (string) = the user-facing description of the achievement, usually a description of how to earn it (e.g. `Complete Monika's route`)
+* id (string) = the unique identifier for your achievement, used in code (e.g. `MY_ACHIEVEMENT_1`)
+* name (string) = the user-facing name of the achievement (e.g. `My Achievement`)
+* description (string) = the user-facing description of the achievement, usually a description of how to earn it (e.g. `Complete Monika's route`)
 
 ### ddmm_earn_achievement(id)
 
 Label - grants the user an achievement. Note that if the achievement has not been registered, an error will occur.
 
-id (string) = the ID passed to `ddmm_register_achievement`
+* id (string) = the ID passed to `ddmm_register_achievement`
 
 ### ddmm_online
 
