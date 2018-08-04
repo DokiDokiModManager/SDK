@@ -17,16 +17,18 @@ init -10 python:
 # description = the user-facing description of the achievement
 label ddmm_register_achievement(id, name, description):
     python:
-        request = urllib2.Request(ddmm_rpc_url, json.dumps({"method": "register achievement", "payload": {"id": id, "name": name, "description": description}}))
-        urllib2.urlopen(request).read()
+        if ddmm_online:
+                request = urllib2.Request(ddmm_rpc_url, json.dumps({"method": "register achievement", "payload": {"id": id, "name": name, "description": description}}))
+                urllib2.urlopen(request).read()
     return
 
 # Earn an achievement
 # id = the unique ID of the achievement
 label ddmm_earn_achievement(id):
     python:
-        request = urllib2.Request(ddmm_rpc_url, json.dumps({"method": "earn achievement", "payload": {"id": id}}))
-        urllib2.urlopen(request).read()
+        if ddmm_online:
+            request = urllib2.Request(ddmm_rpc_url, json.dumps({"method": "earn achievement", "payload": {"id": id}}))
+            urllib2.urlopen(request).read()
     return
 
 # Test SDK functions
